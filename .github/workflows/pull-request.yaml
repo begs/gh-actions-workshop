@@ -52,3 +52,15 @@ jobs:
 
       - name: Vite build
         run: npm run build
+  vite-run: 
+    name: vite-run
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Vite build
+        run: npm run test
