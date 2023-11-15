@@ -41,7 +41,7 @@ jobs:
       - name: Build
         run: npm run build
   vitebuild: 
-    name: build
+    name: vite-build
     runs-on: ubuntu-latest
     steps:
       - name: Vite build
