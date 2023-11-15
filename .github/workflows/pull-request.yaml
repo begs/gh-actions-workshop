@@ -45,4 +45,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Vite build
+        uses: actions/checkout@v3
         run: npm run build
