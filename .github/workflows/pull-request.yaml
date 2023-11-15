@@ -29,10 +29,10 @@ jobs:
   build:
     name: build
     runs-on: ubuntu-latest
-    steps: 
+    steps:
       - name: Checkout repository
-      # To reference external workflows, we use the `uses` keyword.
-      # The thing after the `@` is the version of the workflow, and is a Git tag.
+        # To reference external workflows, we use the `uses` keyword.
+        # The thing after the `@` is the version of the workflow, and is a Git tag.
         uses: actions/checkout@v3
 
       - name: Install dependencies
@@ -40,7 +40,7 @@ jobs:
 
       - name: Build
         run: npm run build
-  vitebuild: 
+  vitebuild:
     name: vite-build
     runs-on: ubuntu-latest
     steps:
@@ -52,7 +52,7 @@ jobs:
 
       - name: Vite build
         run: npm run build
-  vite-run: 
+  vite-run:
     name: vite-run
     runs-on: ubuntu-latest
     steps:
@@ -64,7 +64,7 @@ jobs:
 
       - name: Vite run
         run: npm run test
-  lint: 
+  lint:
     name: lint
     runs-on: ubuntu-latest
     steps:
@@ -76,7 +76,7 @@ jobs:
 
       - name: eslint
         run: npm run lint:check
-  format: 
+  format:
     name: format
     runs-on: ubuntu-latest
     steps:
